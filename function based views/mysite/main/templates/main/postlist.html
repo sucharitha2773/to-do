@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+{% block content %}
+        {% for post in posts %}
+        <div class="card">
+            <div class="card-body"> 
+                <a href="{% url 'postdetail' pk=post.pk %}"><h4>{{ post.content }}</h4></a>
+                <hr>
+                  <p style="text-align: right;">post date :
+                    <small class="text-info">{{ post.date }}</small>
+                </p>
+                
+            </div>
+        </div>
+        <br>
+        {% endfor %}
+    
+{% endblock content %}
+

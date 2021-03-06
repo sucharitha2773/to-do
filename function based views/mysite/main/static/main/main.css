@@ -1,0 +1,12 @@
+
+.main-nav{
+    text-align: center;
+    padding: 10px;
+    background: cyan;
+    border-radius: 2%;
+}
+.main-nav a{
+    padding: 15px;
+}
+
+

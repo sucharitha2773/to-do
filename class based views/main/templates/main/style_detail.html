@@ -1,0 +1,15 @@
+{% extends 'main/index.html' %}
+{% block content %}
+            <article class="media content-section">
+                <div class="media-body">
+                    <div class="article-metadata">
+                        <a href="{% url 'styledetail' style.id %}">{{ style.text }}</a>
+                    </div>
+                    <img class="img" src="{{ style.image.url }}">
+                </div>
+            </article>
+<button><a href="{% url 'styledelete' style.id %}">Delete</a>
+</button>
+<button><a href="{% url 'styleupdate' style.id %}">update</a>
+</button>
+{% endblock content %}

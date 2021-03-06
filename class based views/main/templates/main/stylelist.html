@@ -1,0 +1,13 @@
+{% extends 'main/index.html' %}
+{% block content %}
+{% for style in styles %}
+            <article class="media content-section">
+                <div class="media-body">
+                    <div class="article-metadata">
+                          <a href="{% url 'styledetail' style.id %}"><h1 class="text">{{ style.text }}</h1></a>
+                    </div>
+                        <img class="img" src="{{ style.image.url }}">
+                </div>
+            </article>
+{% endfor %}
+{% endblock content %}

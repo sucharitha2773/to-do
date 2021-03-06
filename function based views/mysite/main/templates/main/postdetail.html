@@ -1,0 +1,19 @@
+
+{% extends 'main/base.html' %}
+{% block content %}
+ <div class="card">
+     <div class="card-body">
+            <h4>{{ post.content }}</h4>
+            <hr>
+            <p><pre>{{ post.text }}</pre></p>
+            <img src="{{ post.image.url }}" alt="">
+            
+            <p style="text-align: right;"> posted at: <small><em>{{ post.date }}</em></small></p>
+            <hr>
+            <button type="button" class="btn btn-outline-blue text-dark"><a href="{% url 'postdelete' pk=post.pk %}">delete</a>
+            </button>
+            <button type="button" class="btn btn-outline-blue text-dark"><a href="{% url 'postupdate' pk=post.pk %}">edit</a></button>
+     </div>
+ </div>
+{% endblock content %}
+
